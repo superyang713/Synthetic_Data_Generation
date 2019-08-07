@@ -1,6 +1,4 @@
-from sqlalchemy import create_engine
+import dask.dataframe as dd
 
 
-address = 'postgresql+psycopg2://sharpestminds:abc123@35.222.59.78/manifold'
-engine = create_engine(address)
-print(engine.table_names())
+df = dd.read_csv("../Data_TransUnion/trans.csv")
