@@ -17,8 +17,8 @@ def composite_SD(means, SDs, ncounts):
 
     # calculate total number of samples, N, and grand mean, GM
     N = sum(ncounts)
-    if N <= 1:
-        raise Exception(f"Warning: only {N} samples, SD is incalculable.")
+    if N == 1:
+        return SDs[0]
     GM = 0.0
     for i in range(num_groups):
         GM += means[i] * ncounts[i]
