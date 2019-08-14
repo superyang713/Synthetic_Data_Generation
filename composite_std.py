@@ -1,5 +1,4 @@
 import math
-import numpy as np
 
 
 def composite_SD(means, SDs, ncounts):
@@ -37,10 +36,3 @@ def composite_SD(means, SDs, ncounts):
     # calculate standard deviation as square root of grand variance
     result = math.sqrt((ESS + TGSS)/(N - 1))
     return result
-
-
-means = np.array([13.14, 11.15, 10.80])
-SDs = np.array([8.69, 11.65, 8.00])
-ncounts = np.array([14, 13, 15])
-result = composite_SD(means, SDs, ncounts)
-print(result)
