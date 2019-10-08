@@ -1,9 +1,15 @@
 import os
 
 import numpy as np
+import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing import image
+
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+sess = tf.Session(config=config)
+keras.backend.set_session(sess)
 
 
 latent_dim = 32

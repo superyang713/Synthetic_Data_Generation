@@ -1,3 +1,5 @@
 /.ipynb_checkpoints
 /data
 /__pycache__
+/learn_gan/generated_image
+/learn_gan/gan.h5
